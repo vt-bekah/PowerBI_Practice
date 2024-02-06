@@ -20,6 +20,8 @@
     * Update Q&A tool synonyms accordingly (e.g. capital is not $ related in this data)
     * Seed the Q&A with two questions
 
+**Note:** For more a complex reporting example, refer to my [Citi Bike Analysis](https://github.com/vt-bekah/Citi-Bike-PowerBI-Analysis) - data see too large to upload pbix file
+
 ### Data Source
 [Learning Power BI Desktop LinkedIn Learning course by Gini von Courter](https://www.linkedin.com/learning/learning-power-bi-desktop-16568640/next-steps?autoSkip=true&resume=false)
 
