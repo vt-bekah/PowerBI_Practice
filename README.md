@@ -1,6 +1,8 @@
-# Power BI Example Work
+**Power BI Example Work**
 
-## Country Populations
+-----------------------------------------------------------------------------------------------
+
+# Country Populations
 
 ### Features
 * Import 2 Excel files with multiple tabs (CountryPops.xlsx, GrowthRates.xlsx)
@@ -20,7 +22,7 @@
     * Update Q&A tool synonyms accordingly (e.g. capital is not $ related in this data)
     * Seed the Q&A with two questions
 
-**Note:** For more a complex reporting example, refer to my [Citi Bike Analysis](https://github.com/vt-bekah/Citi-Bike-PowerBI-Analysis) - data see too large to upload pbix file
+**Note:** For a more complex reporting example, refer to my [Citi Bike Analysis](https://github.com/vt-bekah/Citi-Bike-PowerBI-Analysis) - data see too large to upload pbix file
 
 ### Data Source
 [Learning Power BI Desktop LinkedIn Learning course by Gini von Courter](https://www.linkedin.com/learning/learning-power-bi-desktop-16568640/next-steps?autoSkip=true&resume=false)
@@ -34,3 +36,57 @@
 
 ### Simple Population Report Page
 ![Simple Population Report](images/CountryPopulationReport.png)
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+
+# Home Loan Modeling (DAX heavy)
+
+### Features
+* Download the 15-year and 30-year U.S. mortgage rates from [FRED](https://fred.stlouisfed.org/) and store in CSV files
+* Import and Transform the FRED data as follows:
+    * Merge the the 15-year and 30-year interest rate based on date
+    * Remove entries that do not have both 15-year and 30-year mortgages
+* Create additional tables to support user input filtering and calculations
+    * Dates table that includes the first of each month from the start of of the transformed data through 30 years after the final date
+    * Loan Duration table to allow selecting between 15-year and 30-year mortgages
+    * Loan Period table with a column for loan period (1-360) and years into loan (1-30)
+* Create the following calcuations
+    * Loan Start & Duration based on user input
+    * Interest Rate
+    * Monthly Interest Rate
+    * Loan Period
+    * Monthly Payment Amount
+    * Loan Balance throughout loan
+    * Interest paid in given month
+    * Principal paid in given month
+    * Average interest rate for a given month
+    * Running totals for interest and principal paid running totals
+    * Ending loan balance
+    * Interest paid YTD
+* Create a Loan Model Details report:
+    * Loan Start Date & Loan Duration selectors
+    * For each payment period: Date, Loan Period, Payment Amount, Interest Paid & Running Total, Principal Paid & Running Total, Ending Loan Balance, Interest Paid Year-to-Date (for taxes purposes), Average Interest Rate for Current Month (time to refinance?)
+* Create a dashboard report with:
+    * Loan Start Date & Loan Duration selectors
+    * 15-year & 30-year interest rate over time line chart
+    * Loan Balance vs. Time line graph with 50% marker
+    * Payment make-up over time with 50% marker
+
+**Future Feature:** Add ability to pay additional principal each month
+
+### Data Source
+[Federal Reserve Economic Data](https://fred.stlouisfed.org/)
+
+### File Structure
+* Loan_Dashboard.pbix contains the transformed data and reports
+* Data\MORTGAGE15US.xlsx & Data\MORTGAGE30US.xlsx are the files downloaded from FRED
+
+### Loan Dashboard
+![Loan Dashboard](images/LoanDashboard.png)
+
+### Loan Details
+![Loan Detail](images/LoanDetail.png)
+
+
