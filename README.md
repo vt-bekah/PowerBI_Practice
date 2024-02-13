@@ -73,8 +73,20 @@
     * 15-year & 30-year interest rate over time line chart
     * Loan Balance vs. Time line graph with 50% marker
     * Payment make-up over time with 50% marker
+* Add the ability to account for users paying additional principal as well as easily modify initial loan amount:
+    * Add a selector for starting loan amount
+    * Add a selector for additional monthly principal
+    * Add calculations that account for additional principal payments:
+        * Total principal paid each month from monthly payment + additional and running total
+        * Innterest paid each month accounting for further reduced principal and running total
+        * Loan Balance when accounting for additional principal
+    * Create a new dashboard similar to the original:
+        * new user controls for loan amount and additional principal
+        * modify the line chart to show standard pay-off and additional principal pay-off
 
-**Future Feature:** Add ability to pay additional principal each month
+**Future Features:** 
+* Add card to indicate pay-off date
+* Add card to total interest paid in both scenarios
 
 ### Data Source
 [Federal Reserve Economic Data](https://fred.stlouisfed.org/)
@@ -83,10 +95,12 @@
 * Loan_Dashboard.pbix contains the transformed data and reports
 * Data\MORTGAGE15US.xlsx & Data\MORTGAGE30US.xlsx are the files downloaded from FRED
 
-### Loan Dashboard
-![Loan Dashboard](images/LoanDashboard.png)
+### Loan Dashboard with Additional User Control Including Additional Principal Payments
+![Xtra Loan Dashboard](images/LoanXtraDashboard.png)
 
 ### Loan Details
 ![Loan Detail](images/LoanDetail.png)
 
+### Original Loan Dashboard
+![Loan Dashboard](images/LoanDashboard.png)
 
