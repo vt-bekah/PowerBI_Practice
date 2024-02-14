@@ -83,10 +83,10 @@
     * Create a new dashboard similar to the original:
         * new user controls for loan amount and additional principal
         * modify the line chart to show standard pay-off and additional principal pay-off
+        * Add cards regarding total interest paid / difference if using additional principal
 
 **Future Features:** 
-* Add card to indicate pay-off date
-* Add card to total interest paid in both scenarios
+* Add card to indicate pay-off period
 
 ### Data Source
 [Federal Reserve Economic Data](https://fred.stlouisfed.org/)
