@@ -80,10 +80,11 @@
         * Total principal paid each month from monthly payment + additional and running total
         * Innterest paid each month accounting for further reduced principal and running total
         * Loan Balance when accounting for additional principal
+        * Add call-outs regarding total interest paid / difference if using additional principal
     * Create a new dashboard similar to the original:
         * new user controls for loan amount and additional principal
         * modify the line chart to show standard pay-off and additional principal pay-off
-        * Add cards regarding total interest paid / difference if using additional principal
+        * Add card regarding difference in interest paid if using additional principal
 
 **Future Features:** 
 * Add card to indicate pay-off period
